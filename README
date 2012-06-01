@@ -1,1 +1,39 @@
-Font Resizer is a great plugin.
+Font Resizer is a lightweight jQuery plugin for dynamically changing the font size of any (or all) HTML elements on a page.  It is intended for accessibility concerns, but could be used in any situation where you want your text to grow or shrink on command!
+
+------------------------------------------------------------------------------------------
+
+BASIC USAGE:
+Include the Font Resizer javascript in your HTML.  
+
+The Font Resizer functionality is attached to a button, using any jQuery selector.  For example...
+
+<button id="resizeText"> Enlarge Text </button>
+<script>
+  $('#resizeText').fontResizer();
+</script>
+
+------------------------------------------------------------------------------------------
+
+DEFAULTS:
+Font Resizer will enlarge all paragraph text on the page by 20 percent.  It animates the transition using CSS3 transitions, and adds the class "Aa-text" to all the transformed elements.
+
+------------------------------------------------------------------------------------------
+
+OPTIONS:
+You can customize Font Resizer using the following options...
+
+$('#your-button').fontResizer({
+  target          : 'h1, h2, p',  	// Elements to be enlarged  
+	increaseCent 	: 20,			// How much to enlarge the elements (negatives will shrink the text)
+	exclude 	: '.dontEnlarge',	// Any elements you want Font Resizer to skip	
+	resizedClass    : 'Aa-text',		// Class added to resized elements
+	animate		: true,			// Whether or not to animate the transition
+	transform	: {			// Any additional styling you'd like to add to the resized elements
+		'font-style' : 'italic'
+	}			 
+});
+
+------------------------------------------------------------------------------------------
+
+
+
